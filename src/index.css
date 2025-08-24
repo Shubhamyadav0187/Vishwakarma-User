@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+    /* background-color:  linear-gradient(to right, #0B0C10, #0D47A1); */
+    background-image: linear-gradient(to right, #0B0C10, #093d8c);
+}
