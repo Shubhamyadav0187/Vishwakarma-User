@@ -1,3 +1,10 @@
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+// import Swiper from 'swiper';
+import { SwiperSlide, Swiper } from 'swiper/react';
+
+import '../../index.css';
+
 const Container = ({ children, className = "" }) => (
   <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>
 );
@@ -20,6 +27,7 @@ const CATEGORIES = [
   { key: "Paints", icon: "🎨" },
   { key: "Plumbing", icon: "🚰" },
 ];
+import { EffectCards } from 'swiper/modules';
 
 const Hero = () => (
   <section className=" relative isolate overflow-hidden bg-gradient-to-r from-[#0B0C10] to-blue-900">
@@ -51,14 +59,71 @@ const Hero = () => (
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative h-64 w-full overflow-hidden rounded-3xl shadow lg:h-80"
+        className="relative h-88 w-full overflow-hidden rounded-3xl shadow lg:h-80"
       >
-        <img
+        {/* <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfg4CMPKSznBLWi2UQgZb0Wxdw9aJj5xL_mQ&s"
           alt="Hardware collage"
           className="h-full w-full object-cover"
+        /> */}
+        <div>
+           <Swiper
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+         <img
+          src="https://images.pexels.com/photos/14838208/pexels-photo-14838208.jpeg"
+          alt="Hardware collage"
+          className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent" />
+        </SwiperSlide>
+        <SwiperSlide>  <img
+          src="https://images.pexels.com/photos/259988/pexels-photo-259988.jpeg"
+          alt="Hardware collage"
+          className="h-full w-full object-cover"
+        /></SwiperSlide>
+        <SwiperSlide>  <img
+          src="https://images.pexels.com/photos/207367/pexels-photo-207367.jpeg "
+          alt="Hardware collage"
+          className="h-full w-full object-cover"
+        /></SwiperSlide>
+        <SwiperSlide><img
+          src=" https://images.pexels.com/photos/10059199/pexels-photo-10059199.jpeg"
+          alt="Hardware collage"
+          className="h-full w-full object-cover"
+        /></SwiperSlide>
+        <SwiperSlide><img
+          src="https://images.pexels.com/photos/19174967/pexels-photo-19174967.jpeg "
+          alt="Hardware collage"
+          className="h-full w-full object-cover"
+        /></SwiperSlide>
+        <SwiperSlide><img
+          src=" https://images.pexels.com/photos/175039/pexels-photo-175039.jpeg"
+          alt="Hardware collage"
+          className="h-full w-full object-cover"
+        /></SwiperSlide>
+        <SwiperSlide><img
+          src="https://images.pexels.com/photos/1381938/pexels-photo-1381938.jpeg "
+          alt="Hardware collage"
+          className="h-full w-full object-cover"
+        /></SwiperSlide>
+        <SwiperSlide><img
+          src=" https://images.pexels.com/photos/5623179/pexels-photo-5623179.jpeg"
+          alt="Hardware collage"
+          className="h-full w-full object-cover"
+        /></SwiperSlide>
+        <SwiperSlide><img
+          src=" https://images.pexels.com/photos/3609139/pexels-photo-3609139.jpeg"
+          alt="Hardware collage"
+          className="h-full w-full object-cover"
+        /></SwiperSlide>
+      </Swiper>
+        </div>
+        
+        {/* <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent" /> */}
       </motion.div>
     </Container>
   </section>
